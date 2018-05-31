@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+<script src="https://use.fontawesome.com/64906f59e1.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato|Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="./../../css/style.css"></link>
+    <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/584616/chessboard-0.3.0.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"></link>
+  </head>
+  <body>
+    <header>
+      <a href="./../../../index.html" id=logo>Logo</a>
+      <nav>
+        <ul class="navBar">
+          <li><a href="./../../../index.html">Acceuil</a></li>
+          <li><a href="#">Jouer</a></li>
+          <li><a href="#">Règle du jeu</a></li>
+          <li><a href="./../inscription/inscription.html">Inscription</a></li>
+          <li><a href="./../connexion/connexion.html">Connexion</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="contact">
+      <form>
+        <fieldset>
+          <div class="">
+            <p><label for="nom">Pseudo</label><input type='text' id="nom"></p>
+          </div>
+          <div class="">
+            <p><label for="email">Email</label><input type='text' id="mail"></p>
+          </div>
+          <div class="">
+            <p><label for="mpm">Mot de passe</label><input type='text' id="mdp"></p>
+          </div>
+          <div class="">
+            <!-- <input type="submit" value="Valider" id="envoyer"> -->
+            <button type="button" name="button" id="envoyer">Valider</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./inscription.js"></script>
+
+  </body>
+</html>
