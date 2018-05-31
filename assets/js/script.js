@@ -74,7 +74,7 @@ var navBarNone = function(){
     const user_id = _id;
     const game = game2.fen();
 
-    // axios.post('http://localhost:3000/saves/', {
+    // axios.post('http://51.15.213.4:3000/saves/', {
     //
     //   id_users: user_id,
     //   game: game
@@ -86,7 +86,7 @@ var navBarNone = function(){
     //   alert("Une erreur c'est produite lors de la sauvegarde");
     // });
 
-    axios.get('http://localhost:3000/save/reprendre', {
+    axios.get('http://51.15.213.4:3000/save/reprendre', {
 
       id_users: user_id,
 
@@ -133,14 +133,14 @@ var navBarNone = function(){
       return;
     }
 
-    axios.post('http://localhost:3000/auth/register/', {
+    axios.post('http://http://51.15.213.4:3000/auth/register/', {
 
       name: nomI.trim(),
       email: mailI.trim(),
       password: mdpI.trim()
     // axios({
     // method: "post",
-    // url: "http://localhost:3000/auth/register/",
+    // url: "http://51.15.213.4:3000/auth/register/",
     // data: {
     //     name: nom.trim(),
     //     email: mail.trim(),
@@ -174,7 +174,7 @@ var navBarNone = function(){
     }
 
 
-    axios.post('http://localhost:3000/auth/login/', {
+    axios.post('http://51.15.213.4:3000/auth/login/', {
 
       email: mailC.trim(),
       password: mdpC.trim()
@@ -190,7 +190,7 @@ var navBarNone = function(){
 
       console.log(response.headers);
 
-      axios.get('http://localhost:3000/auth/me/',{
+      axios.get('http://51.15.213.4:3000/auth/me/',{
 
         headers: {'x-access-token': token}
 
