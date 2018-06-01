@@ -4,7 +4,7 @@ module.exports = (expressApp) => {
 
     var http = require('http').Server(app);
     var io = require('socket.io')(http);
-    var port = process.env.PORT || 3002;
+    var port = process.env.PORT || 3001;
 
     var lobbyUsers = {};
     var users = {};

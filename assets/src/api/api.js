@@ -6,7 +6,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
-const port = 3002;
+const port = 3001;
 
 app.use(express.static('assets'));
 app.use(express.static('dashboard'));
