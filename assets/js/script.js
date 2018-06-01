@@ -27,6 +27,12 @@ var navBarNone = function(){
     $("#p-vs-m").addClass('d-none');
   }
 
+  if(token){
+    console.log("j'ai le token");
+    resetNavBar();
+    $("#jouer").removeClass('d-none');
+  }
+
   $('#btnAccueil').click(function(){
     resetNavBar();
     $("#accueil").removeClass('d-none');
