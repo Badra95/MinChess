@@ -30,9 +30,9 @@ app.use ('/save', SavesController);
 
 const online = require('./online')(app);
 
-// app.get("/", (req, res) => {
-//   res.send("hello node");
-// });
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + '/assets/index.html');
+});
 
 // app.listen (port, function () {
 // console.log ('Express serveur écoute sur le port ' + port);
