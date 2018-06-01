@@ -11,7 +11,7 @@ module.exports = (expressApp) => {
     var activeGames = {};
 
     app.get('/', function(req, res) {
-      res.sendFile(__dirname + '/index.html');
+      res.sendFile(__dirname + '/assets/index.html');
 
     });
 
