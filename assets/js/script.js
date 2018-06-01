@@ -98,7 +98,7 @@ var navBarNone = function(){
     const user_id = _id;
     const game = game2.fen();
 
-    axios.post('http://51.15.213.4:3000/saves/', {
+    axios.post('http://51.15.213.4:3002/saves/', {
 
       id_users: user_id,
       game: game
@@ -115,7 +115,7 @@ var navBarNone = function(){
 
     const user_id = _id;
 
-    axios.post('http://51.15.213.4:3000/save/reprendre', {
+    axios.post('http://51.15.213.4:3002/save/reprendre', {
 
       id_users: user_id,
 
@@ -167,7 +167,7 @@ var navBarNone = function(){
       return;
     }
 
-    axios.post('http://http://51.15.213.4:3000/auth/register/', {
+    axios.post('http://http://51.15.213.4:3002/auth/register/', {
 
       name: nomI.trim(),
       email: mailI.trim(),
@@ -212,7 +212,7 @@ var navBarNone = function(){
     }
 
 
-    axios.post('http://51.15.213.4:3000/auth/login/', {
+    axios.post('http://51.15.213.4:3002/auth/login/', {
 
       email: mailC.trim(),
       password: mdpC.trim()
@@ -231,7 +231,7 @@ var navBarNone = function(){
 
       console.log(response.headers);
 
-      axios.get('http://51.15.213.4:3000/auth/me/',{
+      axios.get('http://51.15.213.4:3002/auth/me/',{
 
         headers: {'x-access-token': token}
 
