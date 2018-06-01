@@ -187,7 +187,7 @@ var navBarNone = function(){
       return;
     }
 
-    axios.post('http://http://51.15.213.4:3001/auth/register/', {
+    axios.post('http://51.15.213.4:3001/auth/register/', {
 
       name: nomI.trim(),
       email: mailI.trim(),
