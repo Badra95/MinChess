@@ -69,9 +69,19 @@ var navBarNone = function(){
     $('#jouer').removeClass('d-none');
   });
 
+  $('#jouerArr').click(function(){
+    resetNavBar();
+    $("#accueil").removeClass('d-none');
+  });
+
   $('#vs-p').click(function(){
     resetNavBar();
     $('#p-vs-p').removeClass('d-none');
+  });
+
+  $('#pArr').click(function(){
+    resetNavBar();
+    $("#jouer").removeClass('d-none');
   });
 
   $('#p-start').click(function(){
@@ -85,6 +95,11 @@ var navBarNone = function(){
   $('#vs-c').click(function(){
     resetNavBar();
     $('#p-vs-c').removeClass('d-none');
+  });
+
+  $('#cArr').click(function(){
+    resetNavBar();
+    $("#jouer").removeClass('d-none');
   });
 
   $('#c-start').click(function(){
@@ -131,6 +146,11 @@ var navBarNone = function(){
   $('#vs-m').click(function(){
     resetNavBar();
     $('#p-vs-m').removeClass('d-none');
+  });
+
+  $('#mArr').click(function(){
+    resetNavBar();
+    $("#jouer").removeClass('d-none');
   });
 
   $('#m-start').click(function(){
