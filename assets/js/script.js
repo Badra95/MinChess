@@ -18,6 +18,7 @@ var navBarNone = function(){
     //     tabNone[i].addClass('d-none');
     //     }
 
+    $("#accueil").addClass('d-none');
     $("#inscription").addClass('d-none');
     $("#connexion").addClass('d-none');
     $("#jouer").addClass('d-none');
@@ -28,6 +29,12 @@ var navBarNone = function(){
 
   $('#btnAccueil').click(function(){
     resetNavBar();
+    $("#accueil").removeClass('d-none');
+    if (token){
+      resetNavBar();
+      $("#jouer").removeClass('d-none');
+    }
+
   });
 
   $('#btnInscription').click(function(){
@@ -35,9 +42,20 @@ var navBarNone = function(){
     $('#inscription').removeClass('d-none');
   });
 
+  $('#inscriptionArr').click(function(){
+    resetNavBar();
+    $("#accueil").removeClass('d-none');
+  });
+
+
   $('#btnConnexion').click(function(){
     resetNavBar();
     $('#connexion').removeClass('d-none');
+  });
+
+  $('#connexionArr').click(function(){
+    resetNavBar();
+    $("#accueil").removeClass('d-none');
   });
 
   $('#btnJouer').click(function(){
@@ -74,19 +92,24 @@ var navBarNone = function(){
     const user_id = _id;
     const game = game2.fen();
 
-    // axios.post('http://51.15.213.4:3000/saves/', {
-    //
-    //   id_users: user_id,
-    //   game: game
-    // }).then(function (response) {
-    //   console.log(response);
-    //   alert("sauvegarde faites");
-    // }).catch(function (error) {
-    //   console.log(error);
-    //   alert("Une erreur c'est produite lors de la sauvegarde");
-    // });
+    axios.post('http://51.15.213.4:3000/saves/', {
 
-    axios.get('http://51.15.213.4:3000/save/reprendre', {
+      id_users: user_id,
+      game: game
+    }).then(function (response) {
+      console.log(response);
+      alert("sauvegarde faites");
+    }).catch(function (error) {
+      console.log(error);
+      alert("Une erreur c'est produite lors de la sauvegarde");
+    });
+  })
+
+  $('#c-reprendre').click(function(){
+
+    const user_id = _id;
+
+    axios.post('http://51.15.213.4:3000/save/reprendre', {
 
       id_users: user_id,
 
@@ -118,13 +141,18 @@ var navBarNone = function(){
     const mailI = document.getElementById('mail_inscription').value;
     const mdpI = document.getElementById('mdp_inscription').value;
 
+    function validateEmail(email) {
+      var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    }
+
     if (!nomI){
       alert("Champs du pseudo vide");
       return;
     }
 
-    if (!mailI){
-      alert("Champs du mail vide");
+    if (!validateEmail(mailI)){
+      alert("Mail invalide");
       return;
     }
 
@@ -149,11 +177,15 @@ var navBarNone = function(){
     }).then(function (response) {
       console.log(response);
       alert("Inscription faites");
+      $("#inscription").addClass('d-none');
+      $("#jouer").removeClass('d-none');
+
     }).catch(function (error) {
       console.log(error);
       alert("Une erreur c'est produite lors de l'inscription");
     });
   });
+
 
   $('#envoyer_connexion').click(function(){
 
@@ -187,6 +219,9 @@ var navBarNone = function(){
       // console.log(response.data.token);
       token = response.data.token;
       sessionStorage.setItem('token', token);
+
+      $("#connexion").addClass('d-none');
+      $("#jouer").removeClass('d-none');
 
       console.log(response.headers);
 

@@ -89,18 +89,88 @@ h3 {
   padding-bottom: 15px;
 }
 
+body .button {
+  height: 60px;
+  width: 240px;
+  border-radius: 8px;
+  border: 1px solid black;
+  padding: 10px;
+  outline: none;
+  margin: 0 3rem;
+  font-family: 'Quicksand';
+  font-size: 1em;
+}
+
+#accueil {
+  text-align: center;
+  margin-top: 12rem;
+}
+
+#btnAccueil{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#btnInscription{
+  background-color: #e69138ff;
+}
+
+#btnInscription:hover{
+  background-color: white;
+}
+
+#envoyer_inscription{
+  background-color: white;
+}
+
+#envoyer_inscription:hover{
+  background-color: #c6a46dff;
+}
+
+#btnConnexion{
+  background-color: #134f5cff;
+}
+
+#btnConnexion:hover{
+  background-color: white;
+}
+
+#envoyer_connexion{
+  background-color: white;
+}
+
+#envoyer_connexion:hover{
+  background-color: #3a5c5bff;
+}
+
 #p-vs-p, #p-vs-c, #p-vs-m {
   margin: 50px;
 }
 
 #inscription, #connexion, #jouer {
   margin-top: 10rem;
+  font-family: 'Lato';
+  font-size: 1em;
 }
 
 #inscription div, #connexion div {
-  margin-top: 1rem;
-  display: block;
+  margin-top: 2rem;
   text-align: center;
+}
+
+#inscription input:hover, #connexion input:hover{
+  background-color: #666666ff;
+}
+
+
+.icon{
+  position: absolute;
+  top: 3rem;
+  left: 2rem;
+  height: 70px;
+  width: 70px;
+  margin: 1rem;
 }
 
 .chess {

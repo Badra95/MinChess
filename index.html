@@ -12,7 +12,7 @@
   </head>
   <body>
 
-    <header>
+    <!-- <header>
       <a href="index.html" id=logo>Logo</a>
       <nav>
         <ul class="navBar">
@@ -23,34 +23,44 @@
           <li id="btnConnexion">Connexion</li>
         </ul>
       </nav>
-    </header>
+    </header> -->
 
     <main>
+      <i id="btnAccueil" class="fas fa-chess fa-3x"></i>
+
+      <section id="accueil">
+        <input class="button" type="button" id="btnInscription" value=" Inscription"/>
+        <input class="button" type="button" id="btnConnexion" value=" Connexion"/>
+      </section>
+
       <section id="inscription" class="cacher d-none">
         <article id="contact">
           <form>
-            <fieldset>
+            <div id="inscriptionArr">
+              <img class="icon" src="https://use.fontawesome.com/releases/v5.0.13/svgs/solid/chevron-left.svg" alt="">
+            </div>
               <div class="">
-                <p><label for="nom">Pseudo</label><input type='text' id="nom_inscription"></p>
+                <p><label for="nom">Pseudo <input type='text' id="nom_inscription"></label></p>
               </div>
               <div class="">
-                <p><label for="email">Email</label><input type='text' id="mail_inscription"></p>
+                <p><label for="email">Email <input type='text' id="mail_inscription"></label></p>
               </div>
               <div class="">
-                <p><label for="mdp">Mot de passe</label><input type='text' id="mdp_inscription" type="password"></p>
+                <p><label for="mdp">Mot de passe <input type='text' id="mdp_inscription" type="password"></label></p>
               </div>
               <div class="">
                 <!-- <input type="submit" value="Valider" id="envoyer"> -->
-                <button type="button" name="button" id="envoyer_inscription">Valider</button>
+                <button class="button" type="button" name="button" id="envoyer_inscription">Valider</button>
               </div>
-            </fieldset>
           </form>
         </article>
       </section>
 
       <section id="connexion" class="cacher d-none">
         <form>
-          <fieldset>
+          <div id="connexionArr">
+            <img class="icon" src="https://use.fontawesome.com/releases/v5.0.13/svgs/solid/chevron-left.svg" alt="">
+          </div>
             <div class="">
               <p><label for="mail">Adresse Mail</label><input type='text' id="mail_connexion"></p>
             </div>
@@ -58,9 +68,8 @@
               <p><label for="mdp">Mot de passe</label><input type='text' id="mdp_connexion" type="password"></p>
             </div>
             <div class="">
-              <button type="button" name="button" id="envoyer_connexion">Connection</button>
+              <button class="button" type="button" name="button" id="envoyer_connexion">Connexion</button>
             </div>
-          </fieldset>
         </form>
       </section>
 
@@ -106,6 +115,7 @@
 
         <div class="page login" id='c-settings'>
           <button id='c-start'>Nouvelle Partie</button>
+          <button id='c-reprendre'>Reprendre Partie</button>
         </div>
 
         <div class="d-none" id="p-c">
@@ -170,7 +180,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.9.4/chess.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/584616/chessboard-0.3.0.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <!-- <script src="./lib/socket.io-1.2.0.js"></script> -->
+    <script src="https://use.fontawesome.com/64906f59e1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
 
     <script src="assets/lib/jquery-1.11.1.js"></script>
