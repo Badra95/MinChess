@@ -81,7 +81,8 @@
 
           <p><label for="nom">Joueur 1 <input type='text' id='player1'></label></p>
           <p><label for="nom">Joueur 2 <input type='text' id='player2'></label></p>
-          <button id='p-start'>Lancer la partie</button>
+          <input class="button" type="button" id="p-start" value="Lancer la Partie"/>
+
         </div>
 
         <div class="d-none" id="p-p">
@@ -111,8 +112,8 @@
         </div>
 
         <div class="page login" id='c-settings'>
-          <button id='c-start'>Nouvelle Partie</button>
-          <button id='c-reprendre'>Reprendre Partie</button>
+          <input class="button" type="button" id="c-start" value=" Nouvelle partie"/>
+          <input class="button" type="button" id="c-reprendre" value=" Reprendre la partie"/>
         </div>
 
         <div class="d-none" id="p-c">
@@ -125,9 +126,8 @@
               <article class="gamestatus">
                 <h3>Status: <span id="status2"></span></h3>
                 <article class="game-buttons">
-                  <input class="button" type="button" id="startBtn2" value="Start the Game"/>
-                  <input class="button" type="button" id="clearBtn2" value="Clear the Board"/>
-                  <button id='c-save'>Sauvegarder</button>
+                  <input class="button" type="button" id="startBtn2" value="Nouvelle Partie"/>
+                  <input class="button" type="button" id="c-save" value="Sauvegarder la Partie"/>
                 </article>
               </article>
             </div>
@@ -145,7 +145,7 @@
 
         <div class="page login" id='page-login'>
           <div class='logo'></div>
-          <button id='m-start'>Rejoindre</button>
+          <input class="button" type="button" id="m-start" value="Rejoindre"/>
         </div>
         <div class="d-none page lobby" id='page-lobby'>
           <h2>Bienvenue sur le mode multijoueurs</h2>
@@ -166,6 +166,8 @@
           </div>
           <div>
             <article class="d-none page game" id='page-game'>
+              <input class="button" type="button" id="game-back" value="Quitter"/>
+
               <button id='game-back'>Back</button>
               <button id='game-resign'>Resign</button>
             </article>
